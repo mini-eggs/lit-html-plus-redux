@@ -11,6 +11,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "css-loader",
+            options: {
+              minimize: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.js$/,
         loader: "babel-loader"
       }
