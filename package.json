@@ -3,7 +3,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "static":
-      "rm -rf docs && mkdir docs && mkdir docs/dist && cp index.html docs/index.html && cp -r dist/* docs/dist "
+      "rm -rf docs && mkdir docs && mkdir docs/dist && cp index.html docs/index.html && cp -r dist/* docs/dist && cp -r static/* docs/static"
   },
   "dependencies": {
     "lit-html": "^0.8.0",
