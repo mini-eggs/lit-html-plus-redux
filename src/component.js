@@ -16,7 +16,7 @@ const component = (name, update) => html`
     <br/>
     <br/>
     <br/>
-    <img style="${styles.image}" src="/static/screenshot.png" />
+    <img style="${styles.image}" src="static/screenshot.png" />
   </center>
 `;
 
