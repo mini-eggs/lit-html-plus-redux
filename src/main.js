@@ -2,9 +2,12 @@ import { render } from "lit-html/lib/lit-extended";
 import { store } from "./store";
 import { component } from "./component";
 
-store.subscribe(() => {
-  const update = e => store.dispatch({ type: "=D", payload: e.target.value });
-  render(component(store.getState(), update), document.body);
-});
+/**
+ * Patch DOM on state change.
+ */
+store.subscribe(() => render(component(), document.body));
 
+/**
+ * Initialize (start first state change so app mounts).
+ */
 store.dispatch({ type: "=D", payload: "World" });
